@@ -24,6 +24,14 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('Ini App Bar'),
         backgroundColor: Colors.blue,
+        actions: [
+          Icon(Icons.play_arrow),
+          SizedBox(width: 20),
+          Icon(Icons.access_alarm),
+          SizedBox(width: 20),
+          Icon(Icons.person),
+          SizedBox(width: 20),
+        ],
       ),
     );
   }
