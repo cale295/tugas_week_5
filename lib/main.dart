@@ -9,6 +9,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(debugShowCheckedModeBanner: false,
+    title: 'ini title app',
+    home: Home(),
+    );
+  }
+}
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Ini App Bar'),
+        backgroundColor: Colors.blue,
+      ),
+    );
   }
 }
