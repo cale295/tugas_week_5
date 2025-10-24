@@ -9,12 +9,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
-    title: 'ini title app',
-    home: Home(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'ini title app',
+      home: Home(),
     );
   }
 }
+
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -32,6 +34,43 @@ class Home extends StatelessWidget {
           Icon(Icons.person),
           SizedBox(width: 20),
         ],
+      ),
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              margin: EdgeInsets.all(28),
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.pink, Colors.yellow],
+                ),
+                border: Border.all(color: Colors.black, width: 5),
+              ),
+            ),
+            Container(
+              width: 200,
+              height: 200,
+              margin: EdgeInsets.all(28),
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.blue, Colors.yellow],
+                ),
+                border: Border.all(color: Colors.black, width: 5),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
